@@ -1,0 +1,1418 @@
+{
+	"info": {
+		"_postman_id": "6945c3d8-617d-4c63-ad19-28c41500475b",
+		"name": "Persona API Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30237529"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:55:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Andrea\",\n        \"apellido\": \"Perulan\",\n        \"dni\": 40985319,\n        \"domicilio\": {\n            \"id\": 1,\n            \"calle\": \"Benjamin Argumedo\",\n            \"numero\": 111,\n            \"localidad\": {\n                \"id\": 2,\n                \"denominacion\": \"Guaymallen\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 1,\n                \"titulo\": \"Fuego y Sangre\",\n                \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                \"genero\": \"Fantastico\",\n                \"paginas\": 815,\n                \"autores\": [\n                    {\n                        \"id\": 2,\n                        \"nombre\": \"George R R\",\n                        \"apellido\": \"Martin\",\n                        \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Andrea\",\r\n    \"apellido\": \"Perulan\",\r\n    \"dni\": \"40985319\",\r\n    \"domicilio\": {\r\n        \"calle\": \"Benjamin Argumedo\",\r\n        \"numero\": 111,\r\n        \"localidad\": {\r\n            \"id\": 2,\r\n            \"denominacion\": \"Guaymallen\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Fuego y Sangre\",\r\n            \"fecha\": 2018,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 815,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"George R R\",\r\n                    \"apellido\": \"Martin\",\r\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\r\n                }\r\n    \r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CreatePersona1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Andrea\",\r\n    \"apellido\": \"Perulan\",\r\n    \"dni\": \"40985319\",\r\n    \"domicilio\": {\r\n        \"calle\": \"Benjamin Argumedo\",\r\n        \"numero\": 111,\r\n        \"localidad\": {\r\n            \"id\": 2,\r\n            \"denominacion\": \"Guaymallen\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Fuego y Sangre\",\r\n            \"fecha\": 2018,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 815,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"George R R\",\r\n                    \"apellido\": \"Martin\",\r\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\r\n                }\r\n    \r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:53:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Andrea\",\n    \"apellido\": \"Perulan\",\n    \"dni\": 40985319,\n    \"domicilio\": {\n        \"id\": 1,\n        \"calle\": \"Benjamin Argumedo\",\n        \"numero\": 111,\n        \"localidad\": {\n            \"id\": 2,\n            \"denominacion\": \"Guaymallen\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 1,\n            \"titulo\": \"Fuego y Sangre\",\n            \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n            \"genero\": \"Fantastico\",\n            \"paginas\": 815,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"George R R\",\n                    \"apellido\": \"Martin\",\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "CreatePersona2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Andrea\",\r\n    \"apellido\": \"Martinez\",\r\n    \"dni\": \"40985319\",\r\n    \"domicilio\": {\r\n        \"calle\": \"Pedro Molina\",\r\n        \"numero\": 111,\r\n        \"localidad\": {\r\n            \"id\": 3,\r\n            \"denominacion\": \"Godoy Cruz\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Fuego y Sangre\",\r\n            \"fecha\": 2018,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 815,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"George R R\",\r\n                    \"apellido\": \"Martin\",\r\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\r\n                }\r\n    \r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:42:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Andrea\",\n    \"apellido\": \"Martinez\",\n    \"dni\": 40985319,\n    \"domicilio\": {\n        \"id\": 3,\n        \"calle\": \"Pedro Molina\",\n        \"numero\": 111,\n        \"localidad\": {\n            \"id\": 3,\n            \"denominacion\": \"Godoy Cruz\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 3,\n            \"titulo\": \"Fuego y Sangre\",\n            \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n            \"genero\": \"Fantastico\",\n            \"paginas\": 815,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"George R R\",\n                    \"apellido\": \"Martin\",\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "CreatePersona3",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Paula\",\r\n    \"apellido\": \"Sanz\",\r\n    \"dni\": \"40985319\",\r\n    \"domicilio\": {\r\n        \"calle\": \"Juan Rodriguez\",\r\n        \"numero\": 111,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Lujan de Cuyo\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"titulo\": \"Fuego y Sangre\",\r\n            \"fecha\": 2018,\r\n            \"genero\": \"Fantastico\",\r\n            \"paginas\": 815,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 2,\r\n                    \"nombre\": \"George R R\",\r\n                    \"apellido\": \"Martin\",\r\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\r\n                }\r\n    \r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:44:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"nombre\": \"Paula\",\n    \"apellido\": \"Sanz\",\n    \"dni\": 40985319,\n    \"domicilio\": {\n        \"id\": 4,\n        \"calle\": \"Juan Rodriguez\",\n        \"numero\": 111,\n        \"localidad\": {\n            \"id\": 1,\n            \"denominacion\": \"Lujan de Cuyo\"\n        }\n    },\n    \"libros\": [\n        {\n            \"id\": 4,\n            \"titulo\": \"Fuego y Sangre\",\n            \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n            \"genero\": \"Fantastico\",\n            \"paginas\": 815,\n            \"autores\": [\n                {\n                    \"id\": 2,\n                    \"nombre\": \"George R R\",\n                    \"apellido\": \"Martin\",\n                    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "search1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas/search?filtro=Andrea",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"search"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "Andrea"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:10:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Andrea\",\n        \"apellido\": \"Perulan\",\n        \"dni\": 40985319,\n        \"domicilio\": {\n            \"id\": 1,\n            \"calle\": \"Benjamin Argumedo\",\n            \"numero\": 111,\n            \"localidad\": {\n                \"id\": 2,\n                \"denominacion\": \"Guaymallen\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 1,\n                \"titulo\": \"Fuego y Sangre\",\n                \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                \"genero\": \"Fantastico\",\n                \"paginas\": 815,\n                \"autores\": [\n                    {\n                        \"id\": 2,\n                        \"nombre\": \"George R R\",\n                        \"apellido\": \"Martin\",\n                        \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						},
+						{
+							"name": "search2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas/search?filtro=Paula",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"search"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "Paula"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:46:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"nombre\": \"Paula\",\n        \"apellido\": \"Sanz\",\n        \"dni\": 40985319,\n        \"domicilio\": {\n            \"id\": 4,\n            \"calle\": \"Juan Rodriguez\",\n            \"numero\": 111,\n            \"localidad\": {\n                \"id\": 1,\n                \"denominacion\": \"Lujan de Cuyo\"\n            }\n        },\n        \"libros\": [\n            {\n                \"id\": 4,\n                \"titulo\": \"Fuego y Sangre\",\n                \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                \"genero\": \"Fantastico\",\n                \"paginas\": 815,\n                \"autores\": [\n                    {\n                        \"id\": 2,\n                        \"nombre\": \"George R R\",\n                        \"apellido\": \"Martin\",\n                        \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                    }\n                ]\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "SearchAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas/paged?paged=0&size=3&sort=id,asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"paged"
+									],
+									"query": [
+										{
+											"key": "paged",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										},
+										{
+											"key": "sort",
+											"value": "id,asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:39:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Andrea\",\n            \"apellido\": \"Perulan\",\n            \"dni\": 40985319,\n            \"domicilio\": {\n                \"id\": 1,\n                \"calle\": \"Benjamin Argumedo\",\n                \"numero\": 111,\n                \"localidad\": {\n                    \"id\": 2,\n                    \"denominacion\": \"Guaymallen\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 1,\n                    \"titulo\": \"Fuego y Sangre\",\n                    \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                    \"genero\": \"Fantastico\",\n                    \"paginas\": 815,\n                    \"autores\": [\n                        {\n                            \"id\": 2,\n                            \"nombre\": \"George R R\",\n                            \"apellido\": \"Martin\",\n                            \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"nombre\": \"Andrea\",\n            \"apellido\": \"Sanz\",\n            \"dni\": 40985319,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Pedro Molina\",\n                \"numero\": 111,\n                \"localidad\": {\n                    \"id\": 3,\n                    \"denominacion\": \"Godoy Cruz\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"Fuego y Sangre\",\n                    \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                    \"genero\": \"Fantastico\",\n                    \"paginas\": 815,\n                    \"autores\": [\n                        {\n                            \"id\": 2,\n                            \"nombre\": \"George R R\",\n                            \"apellido\": \"Martin\",\n                            \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 3,\n        \"sort\": {\n            \"empty\": false,\n            \"unsorted\": false,\n            \"sorted\": true\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 3,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"unsorted\": false,\n        \"sorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "SearchPaged",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/personas/searchPaged?filtro=Andrea&page=0&size=4&sort=id,desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"personas",
+										"searchPaged"
+									],
+									"query": [
+										{
+											"key": "filtro",
+											"value": "Andrea"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "4"
+										},
+										{
+											"key": "sort",
+											"value": "id,desc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 11 Oct 2023 03:38:44 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 2,\n            \"nombre\": \"Andrea\",\n            \"apellido\": \"Sanz\",\n            \"dni\": 40985319,\n            \"domicilio\": {\n                \"id\": 2,\n                \"calle\": \"Pedro Molina\",\n                \"numero\": 111,\n                \"localidad\": {\n                    \"id\": 3,\n                    \"denominacion\": \"Godoy Cruz\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 2,\n                    \"titulo\": \"Fuego y Sangre\",\n                    \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                    \"genero\": \"Fantastico\",\n                    \"paginas\": 815,\n                    \"autores\": [\n                        {\n                            \"id\": 2,\n                            \"nombre\": \"George R R\",\n                            \"apellido\": \"Martin\",\n                            \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 1,\n            \"nombre\": \"Andrea\",\n            \"apellido\": \"Perulan\",\n            \"dni\": 40985319,\n            \"domicilio\": {\n                \"id\": 1,\n                \"calle\": \"Benjamin Argumedo\",\n                \"numero\": 111,\n                \"localidad\": {\n                    \"id\": 2,\n                    \"denominacion\": \"Guaymallen\"\n                }\n            },\n            \"libros\": [\n                {\n                    \"id\": 1,\n                    \"titulo\": \"Fuego y Sangre\",\n                    \"fecha\": \"1970-01-01T00:00:02.018+00:00\",\n                    \"genero\": \"Fantastico\",\n                    \"paginas\": 815,\n                    \"autores\": [\n                        {\n                            \"id\": 2,\n                            \"nombre\": \"George R R\",\n                            \"apellido\": \"Martin\",\n                            \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 4,\n        \"sort\": {\n            \"empty\": false,\n            \"unsorted\": false,\n            \"sorted\": true\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 4,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"unsorted\": false,\n        \"sorted\": true\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/localidades",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:16:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"denominacion\": \"Guaymallen\"\n    },\n    {\n        \"id\": 2,\n        \"denominacion\": \"Godoy Cruz\"\n    },\n    {\n        \"id\": 3,\n        \"denominacion\": \"Lujan de Cuyo\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/localidades/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"localidades",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:25:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"denominacion\": \"Lujan de Cuyo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CreateLocal1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"denominacion\": \"Lujan de Cuyo\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/localidades",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:16:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"denominacion\": \"Lujan de Cuyo\"\n}"
+						},
+						{
+							"name": "CreateLocal2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"denominacion\": \"Guaymallen\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/localidades",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:21:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"denominacion\": \"Guaymallen\"\n}"
+						},
+						{
+							"name": "CreateLocal3",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"denominacion\": \"Godoy Cruz\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/localidades",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"localidades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:22:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"denominacion\": \"Godoy Cruz\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/autores",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:39:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Liliana\",\n        \"apellido\": \"Bodoc\",\n        \"biografia\": \"Nació el 21 de julio de 1958 en la provincia de Santa Fe, y cuando tenía 6 años su familia se trasladó a Mendoza porque su padre iría a trabajar allí. Estudió Licenciatura en Letras en la Universidad Nacional de Cuyo y ejerció como docente de Literatura Española y Argentina en diversos colegios de la misma universidad3​ a 30 kilómetros de la ciudad de San Luis, hasta su muerte producto de un paro cardíaco, ocurrida la madrugada del 6 de febrero de 2018.\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"George R R\",\n        \"apellido\": \"Martin\",\n        \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Nicholas\",\n        \"apellido\": \"Spark\",\n        \"biografia\": \"Nicholas Charles Sparks (Omaha, Nebraska; 31 de diciembre de 1965) es un escritor, guionista y productor estadounidense. Como escritor sus novelas han alcanzado éxito internacional.Ha publicado 20 novelas, 11 de las cuales han sido llevadas al cine: Mensaje en una botella, Un paseo para recordar, El diario de Noah, Noches de tormenta, La última canción, Querido John, Cuando te encuentre, Un lugar donde refugiarse, Lo mejor de mí.Vive en New Bern, Carolina del Norte, con su esposa Catherine y sus cinco hijos.\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get one",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/v1/autores/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"autores",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:39:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"George R R\",\n    \"apellido\": \"Martin\",\n    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "CreateAutor1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Liliana\",\r\n    \"apellido\": \"Bodoc\",\r\n    \"biografia\": \"Nació el 21 de julio de 1958 en la provincia de Santa Fe, y cuando tenía 6 años su familia se trasladó a Mendoza porque su padre iría a trabajar allí. Estudió Licenciatura en Letras en la Universidad Nacional de Cuyo y ejerció como docente de Literatura Española y Argentina en diversos colegios de la misma universidad3​ a 30 kilómetros de la ciudad de San Luis, hasta su muerte producto de un paro cardíaco, ocurrida la madrugada del 6 de febrero de 2018.\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/autores",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:31:12 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nombre\": \"Liliana\",\n    \"apellido\": \"Bodoc\",\n    \"biografia\": \"Nació el 21 de julio de 1958 en la provincia de Santa Fe, y cuando tenía 6 años su familia se trasladó a Mendoza porque su padre iría a trabajar allí. Estudió Licenciatura en Letras en la Universidad Nacional de Cuyo y ejerció como docente de Literatura Española y Argentina en diversos colegios de la misma universidad3​ a 30 kilómetros de la ciudad de San Luis, hasta su muerte producto de un paro cardíaco, ocurrida la madrugada del 6 de febrero de 2018.\"\n}"
+						},
+						{
+							"name": "CreateAutor2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"George R R\",\r\n    \"apellido\": \"Martin\",\r\n    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/autores",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:34:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"nombre\": \"George R R\",\n    \"apellido\": \"Martin\",\n    \"biografia\": \"George Raymond Richard Martin (Bayonne, Nueva Jersey, 20 de septiembre de 1948), es un escritor y guionista estadounidense de literatura fantástica, ciencia ficción y terror. Es conocido especialmente por ser el autor de la serie de novelas Canción de hielo y fuego, adaptada para la televisión con el título de Juego de tronos (Game of Thrones).\"\n}"
+						},
+						{
+							"name": "CreateAutor3",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Nicholas\",\r\n    \"apellido\": \"Spark\",\r\n    \"biografia\": \"Nicholas Charles Sparks (Omaha, Nebraska; 31 de diciembre de 1965) es un escritor, guionista y productor estadounidense. Como escritor sus novelas han alcanzado éxito internacional.Ha publicado 20 novelas, 11 de las cuales han sido llevadas al cine: Mensaje en una botella, Un paseo para recordar, El diario de Noah, Noches de tormenta, La última canción, Querido John, Cuando te encuentre, Un lugar donde refugiarse, Lo mejor de mí.Vive en New Bern, Carolina del Norte, con su esposa Catherine y sus cinco hijos.\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/v1/autores",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"autores"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Oct 2023 13:38:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Nicholas\",\n    \"apellido\": \"Spark\",\n    \"biografia\": \"Nicholas Charles Sparks (Omaha, Nebraska; 31 de diciembre de 1965) es un escritor, guionista y productor estadounidense. Como escritor sus novelas han alcanzado éxito internacional.Ha publicado 20 novelas, 11 de las cuales han sido llevadas al cine: Mensaje en una botella, Un paseo para recordar, El diario de Noah, Noches de tormenta, La última canción, Querido John, Cuando te encuentre, Un lugar donde refugiarse, Lo mejor de mí.Vive en New Bern, Carolina del Norte, con su esposa Catherine y sus cinco hijos.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
